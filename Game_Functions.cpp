@@ -274,7 +274,6 @@ namespace GameFunctions {
         }
     }
     void HandleMouseClick() {
-
         for (int i = 0; i < BoardDimension; i++) {
             for (int j = 0; j < BoardDimension; j++) {
                 if (CheckCollisionPointCircle({ (float)GetMouseX(), (float)GetMouseY() }, BeadsPositions[i][j], 30)) {
@@ -362,14 +361,12 @@ namespace GameFunctions {
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 save << Beads[i][j] << ",";
-
             }
         }
         save << IsTurnWhite;
         save.close();
     }
     void ReadGameDataFromFile() {
-
         ifstream GetValues;
         GetValues.open("GameData.txt");
         for (int i = 0; i < 5; i++) {
